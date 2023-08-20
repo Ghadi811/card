@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>النقابة العامة للسيارات</title>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleCard.css">
+  
+
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: white;
+  background-image: url(bg.png);
+  background-color: black;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.container-main {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* Center-align the content */
+  padding: 20px; /* Add some spacing around the content */
+}
+
+.logo-pic {
+  margin-bottom: 20px; /* Add some space between image and text */
+}
+
+img {
+  width: 250px;
+  height: 140px;
+  display: block;
+  margin: 0 auto;
+}
+
+.container {
+  width: 560px;
+  background: rgba(199, 207, 207, 0.8);
+  box-shadow: 0 0 8px rgb(250, 250, 250, 0.6);
+  display: flex; /* Add flex display */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add some spacing */
+}
+
+.container form {
+  width: 100%;
+  text-align: center; /* Center the form content */
+  padding: 25px 20px;
+}
+
+form h1 {
+  padding: 10px 0;
+}
+
+form .id {
+  position: relative;
+}
+
+form input {
+  width: 50%;
+  height: 30px;
+  margin: 4px 0;
+  border: 1px solid#5c5c5c;
+  border-radius: 3px;
+  background: #ffffff;
+  padding: 0 15px;
+  font-size: 20px;
+}
+
+form textarea {
+  padding: 5px 15px;
+  width: 90%;
+  height: 100px;
+  margin: 4px 0;
+  border: 1px solid#5c5c5c;
+  border-radius: 3px;
+  background: #181717;
+  font-size: 20px;
+}
+form .rounded-button {
+background-color: #de6d89; /* Set your desired button background color */
+color: white;
+border: none;
+border-radius: 20px; /* Add rounded corners */
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+margin-top: 15px; /* Add some space between the inputs and the button */
+transition: background-color 0.3s ease; /* Add a smooth color transition */
+}
+
+form .rounded-button:hover {
+background-color: #2980b9; /* Darken the color on hover */
+}
+
+
+.hiddenImage{
+  width: 100%;
+  height: auto;
+}
+.fristImage{
+  position: relative;
+  width: 100%;
+}
+.secImage{
+  position: relative;
+  width: 100%;
+}
+
+  #ArNamelbl {
+    color: #7A7E82;
+    position: absolute;
+    top: 40%; /* Adjust as needed */
+    left: 50%;
+    font-size: xx-large;
+ 
+}
+
+#Arpos {
+  color: #7A7E82;
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    left: 50%;
+    font-size: large;
+/* Center the label both horizontally and vertically */
+  }
+
+#phoneNumber {
+    color: #7A7E82;
+    position: absolute;
+    top: 58.5%; /* Adjust as needed */
+    left: 45%;
+    font-size: medium;
+
+}
+
+#email {
+    color: #7A7E82;
+    position: absolute;
+    top: 63%; /* Adjust as needed */
+    left: 47%;
+    font-size: medium;
+
+}
+#qr1{
+    color: #7A7E82;
+    position: absolute;
+    top: 51%; /* Adjust as needed */
+    left: 12%;
+
+
+}
+
+#EnNamelbl {
+  color: #7A7E82;
+    position: absolute;
+    top: 40%; /* Adjust as needed */
+    left: 10%;
+    font-size: xx-large;
+
+}
+
+#Enpos {
+  color: #7A7E82;
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    left: 10%;
+    font-size: large;
+ /* Center the label both horizontally and vertically */
+}
+
+#phoneEn {
+  color: #7A7E82;
+    position: absolute;
+    top: 59%; /* Adjust as needed */
+    left: 11%;
+    font-size: medium;
+
+}
+
+#emailEn {
+  color: #7A7E82;
+  position: absolute;
+  top: 65%; /* Adjust as needed */
+  left: 11.5%;
+  font-size: medium;
+
+}
+#qr2{
+    color: #7A7E82;
+    position: absolute;
+    top: 51.5%; /* Adjust as needed */
+    left: 73%;
+  
+}
+
+#qr1 img{
+  width: 80px;
+  height: 80px;
+}
+#qr2 img{
+  width: 80px;
+  height: 80px;
+}
+@media screen and (max-width: 600px) {
+  .container-main {
+    width: 90%; /* Full width on smaller screens */
+    padding: 10px; /* Adjust the spacing around the main content */
+  }
+  .container {
+    width: 90%; /* 90% width on smaller screens */
+    margin: 20px auto; /* Increase the top and bottom margin for breathing space */
+    padding: 10px; /* Adjust padding */
+  }
+
+  form input,
+  form textarea {
+    width: 90%; /* Full width inputs on smaller screens */
+    box-sizing: border-box; /* Ensure padding and border are included in total width */
+  }
+  .hiddenImage {
+    width: 100%;
+    height: auto;
+  }
+  
+  .fristImage, .secImage {
+    position: relative;
+  }
+
+  #ArNamelbl {
+    color: #7A7E82;
+    position: absolute;
+    top: 90px; /* Adjust as needed */
+    left: 50%;
+    font-size: 1.5em; /* Adjust font size */
+    transform: translate(-10%, -50%);
+  }
+
+  #Arpos {
+    color: #7A7E82;
+    position: absolute;
+    top: 110px; /* Adjust as needed */
+    left: 50%;
+    font-size: medium; /* Adjust font size */
+    transform: translate(30%, -50%);
+  }
+
+  #phoneNumber {
+    color: #7A7E82;
+    position: absolute;
+    top: 125px; /* Adjust as needed */
+    left: 50%;
+    font-size: xx-small; /* Adjust font size */
+    transform: translate(-30%, -50%);
+  }
+
+  #email {
+    color: #7A7E82;
+    position: absolute;
+    top: 135px; /* Adjust as needed */
+    left: 50%;
+    font-size: xx-small; /* Adjust font size */
+    transform: translate(-10%, -10%);
+  }
+
+  #EnNamelbl {
+    color: #7A7E82;
+    position: absolute;
+    top: 90px; /* Adjust as needed */
+    left: 50%;
+    font-size: 1.5em;; /* Adjust font size */
+    transform: translate(-100%, -50%);
+  }
+
+  #Enpos {
+    color: #7A7E82;
+    position: absolute;
+    top: 110px; /* Adjust as needed */
+    left: 50%;
+    font-size: small; /* Adjust font size */
+    transform: translate(-100%, -50%);
+  }
+
+  #phoneEn {
+    color: #7A7E82;
+    position: absolute;
+    top: 128px; /* Adjust as needed */
+    left: 44%;
+    font-size: small; /* Adjust font size */
+    transform: translate(-140%, -50%);
+  }
+
+  #emailEn {
+    color: #7A7E82;
+    position: absolute;
+    top: 141px; /* Adjust as needed */
+    left: 49%;
+    font-size: small; /* Adjust font size */
+    transform: translate(-110%, -50%);
+  }
+  #qr1 img{
+  width: 50px;
+  height: 49px;
+}
+#qr2 img{
+  width: 50px;
+  height: 49px;
+}
+#qr1{
+    color: #7A7E82;
+    position: absolute;
+    top: 49%; /* Adjust as needed */
+    left: 7%;
+
+
+}
+#qr2{
+    color: #7A7E82;
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    left: 67%;
+  
+}
+ 
+}
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="container-main">
+      <div class="container">
+        <div class="logo-pic">
+          <img src="logo-naqaba.png" alt="naqhaba" width="450" height="150">
+        </div>
+        <h2>ننتمنى لك عامًا مليئًا بالسعادة والصحة والازدهار</h2>
+        <small>كل عام وانتم بخير</small>
+        <form>
+          <div class="id">
+            <input type="text" id="ArName" placeholder="الاسم كامل" name="first-name-ar" ><br>
+            <!-- Your other input fields -->
+            <input type="text" id="position-ar" placeholder="المنصب" name="position-ar" ><br>
+            <input type="tel" id="phone-en" placeholder="رقم الهاتف" name="phone-en" ><br>
+            <input type="email" id="email-en" placeholder="الايميل" name="email-en" ><br>
+            <input type="text" id="EnName" placeholder="full Name" name="EnName" ><br>
+            <input type="text" id="position-en" placeholder="Position" name="position-en" ><br>
+
+            <button type="button" class="rounded-button" id="print">حفظ البطاقة</button>
+            <button type="button" class="rounded-button" id="showImageBtn">معاينة البطاقة</button>
+              </div>
+        </form>
+        <div id="hidden-div" style="display: none; font: Din-next-light; color: #7A7E82;">
+          <div class="fristImage">
+            <img class="hiddenImage" src="newCard.png" alt="card1">
+            <label id="ArNamelbl"></label><br> 
+            <label id="Arpos"></label>
+            <label id="phoneNumber"></label>
+            <label id="email"></label>
+            <div id="qr1" ></div>
+          </div>
+          <div class="secImage">
+            <img class="hiddenImage" src="newCard2.png" alt="card2">
+            <label id="EnNamelbl"></label><br> 
+            <label id="Enpos"></label>
+            <label id="phoneEn"></label>
+            <label id="emailEn"></label>
+            <div id="qr2" ></div>
+          </div>
+        </div>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const qr1Container = document.getElementById("qr1");
+      const qr2Container = document.getElementById("qr2");
+      const printButton = document.querySelector("#print");
+      const button = document.querySelector("#showImageBtn");
+  
+      button.addEventListener("click", function(event) {
+        const hiddenImage = document.getElementById("hidden-div");
+        hiddenImage.style.display = "block";
+        event.preventDefault();
+  
+        const emailEnInput = document.getElementById("email-en").value;
+        const arNameInput = document.getElementById("ArName").value;
+        const arPositionInput = document.getElementById("position-ar").value;
+        const phoneEnInput = document.getElementById("phone-en").value;
+        const enNameInput = document.getElementById("EnName").value;
+        const enPositionInput = document.getElementById("position-en").value;
+  
+        const arNameLabel = document.getElementById("ArNamelbl");
+        const arPosLabel = document.getElementById("Arpos");
+        const phoneLabel = document.getElementById("phoneNumber");
+        const emailLabel = document.getElementById("email");
+        const enNameLabel = document.getElementById("EnNamelbl");
+        const enPosLabel = document.getElementById("Enpos");
+        const phoneEnLabel = document.getElementById("phoneEn");
+        const emailEnLabel = document.getElementById("emailEn");
+  
+        arNameLabel.textContent = arNameInput;
+        arPosLabel.textContent = arPositionInput;
+        phoneLabel.textContent = phoneEnInput;
+        emailLabel.textContent = emailEnInput;
+        enNameLabel.textContent = enNameInput;
+        enPosLabel.textContent = enPositionInput;
+        phoneEnLabel.textContent = phoneEnInput;
+        emailEnLabel.textContent = emailEnInput;
+  
+        updateQRCodeData(emailEnInput);
+      });
+  
+      function updateQRCodeData(email) {
+        // Clear the existing content of qr1Container and qr2Container
+        qr1Container.innerHTML = "";
+        qr2Container.innerHTML = "";
+  
+        const qrcode1 = new QRCode(qr1Container, {
+          text: email
+        });
+  
+        const qrcode2 = new QRCode(qr2Container, {
+          text: email
+        });
+          qr1Container.style.width = "80px";
+  qr1Container.style.height = "80px";
+
+  qr2Container.style.width = "80px";
+  qr2Container.style.height = "80px";
+      }
+  
+      printButton.addEventListener("click", function() {
+        const downloadImage = document.getElementById("hidden-div");
+        const emailEnInput = document.getElementById("email-en").value;
+  
+        // Update QR codes before capturing
+        updateQRCodeData(emailEnInput);
+  
+        // Convert the element to an image
+        domtoimage.toBlob(downloadImage)
+          .then(function(blob) {
+            const anchor = document.createElement('a');
+            anchor.setAttribute("href", URL.createObjectURL(blob));
+            anchor.setAttribute("download", "card.png");
+            anchor.click();
+          })
+          .catch(function(error) {
+            console.error("Error converting element to image:", error);
+          });
+      });
+    });
+  </script>
+  
+
+
+</body>        
+</html>

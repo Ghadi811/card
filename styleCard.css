@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: white;
+  background-image: url(bg.png);
+  background-color: black;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.container-main {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* Center-align the content */
+  padding: 20px; /* Add some spacing around the content */
+}
+
+.logo-pic {
+  margin-bottom: 20px; /* Add some space between image and text */
+}
+
+img {
+  width: 250px;
+  height: 140px;
+  display: block;
+  margin: 0 auto;
+}
+
+.container {
+  width: 560px;
+  background: rgba(199, 207, 207, 0.8);
+  box-shadow: 0 0 8px rgb(250, 250, 250, 0.6);
+  display: flex; /* Add flex display */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add some spacing */
+}
+
+.container form {
+  width: 100%;
+  text-align: center; /* Center the form content */
+  padding: 25px 20px;
+}
+
+form h1 {
+  padding: 10px 0;
+}
+
+form .id {
+  position: relative;
+}
+
+form input {
+  width: 50%;
+  height: 30px;
+  margin: 4px 0;
+  border: 1px solid#5c5c5c;
+  border-radius: 3px;
+  background: #ffffff;
+  padding: 0 15px;
+  font-size: 20px;
+}
+
+form textarea {
+  padding: 5px 15px;
+  width: 90%;
+  height: 100px;
+  margin: 4px 0;
+  border: 1px solid#5c5c5c;
+  border-radius: 3px;
+  background: #181717;
+  font-size: 20px;
+}
+form .rounded-button {
+background-color: #de6d89; /* Set your desired button background color */
+color: white;
+border: none;
+border-radius: 20px; /* Add rounded corners */
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+margin-top: 15px; /* Add some space between the inputs and the button */
+transition: background-color 0.3s ease; /* Add a smooth color transition */
+}
+
+form .rounded-button:hover {
+background-color: #2980b9; /* Darken the color on hover */
+}
